@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:background="@color/bg_white"
+            android:gravity="center"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/font_17"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_above="@+id/view_line"
+            android:text="价格"
+            />
+
+
+        <View
+            android:layout_above="@+id/rule_ls"
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_1"
+            android:background="@color/line_gray_cc"/>
+
+        <com.zhejiang.haoxiadan.ui.view.NoScrollListView
+            android:background="@color/bg_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rule_ls"
+            android:divider="@color/line_gray_cc"
+            android:dividerHeight="@dimen/divider_1"
+            android:layout_above="@+id/tv_finish"
+            ></com.zhejiang.haoxiadan.ui.view.NoScrollListView>
+
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:id="@+id/tv_finish"
+            android:textSize="@dimen/font_17"
+            android:gravity="center"
+            android:background="@color/main_red"
+            android:textColor="@color/text_white"
+            android:text="完成"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

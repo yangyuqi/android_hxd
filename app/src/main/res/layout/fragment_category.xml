@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_gray">
+    <com.zhejiang.haoxiadan.ui.view.CommonTitle
+        android:id="@+id/common_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleStr="@string/title_category"
+        app:rightIcon="@drawable/btn_more2"
+        app:showRightIcon="true"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_1"
+        android:background="@color/line_gray_cc"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/category_tab_height"
+        android:background="@color/bg_white"/>
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/transparent"
+        android:dividerHeight="@dimen/list_divider_4"/>
+
+</LinearLayout>

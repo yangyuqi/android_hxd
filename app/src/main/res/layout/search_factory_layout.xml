@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:background="@color/bg_white"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:padding="@dimen/distance"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerInside"
+            android:clickable="true"
+            android:id="@+id/iv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_back"/>
+
+        <RelativeLayout
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_toLeftOf="@+id/iv_more"
+            android:layout_toRightOf="@+id/iv_left"
+            android:background="@drawable/search_factory_bg"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+            <EditText
+                android:layout_marginLeft="@dimen/distance"
+                android:textColor="@color/text_gray"
+                android:cursorVisible="true"
+                android:singleLine="true"
+                android:imeOptions="actionSearch"
+                android:id="@+id/tv_search"
+                android:textColorHint="@color/text_gray"
+                android:textSize="@dimen/font_13"
+                android:background="@null"
+                android:hint=""
+                android:drawablePadding="@dimen/distance"
+                android:drawableLeft="@mipmap/icon_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/btn_more2"
+            android:padding="@dimen/distance"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:background="@color/bg_white"
+        android:layout_marginTop="@dimen/item_distance_5"
+        android:layout_width="match_parent"
+        android:layout_height="41dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <RelativeLayout
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:id="@+id/tv_zonghe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="综合"
+                android:textColor="@color/main_red"
+                android:textSize="@dimen/font_15"
+                />
+
+             <View
+                 android:id="@+id/view_line"
+                 android:layout_marginLeft="42dp"
+                 android:layout_marginRight="42dp"
+                 android:layout_alignParentBottom="true"
+                 android:layout_width="wrap_content"
+                 android:layout_height="2dp"
+                 android:background="@color/main_red"/>
+
+
+    </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <RelativeLayout
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:drawablePadding="@dimen/distance"
+                    android:drawableRight="@mipmap/btn_down"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/tv_hangye"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="主营行业"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/font_15"
+                    />
+
+                <View
+                    android:visibility="gone"
+                    android:id="@+id/view_line2"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:background="@color/main_red"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <RelativeLayout
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_yingye"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="年营业额"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/font_15"
+                    />
+
+                <ImageView
+                    android:id="@+id/default_iv"
+                    android:layout_marginLeft="@dimen/distance"
+                    android:layout_toRightOf="@+id/tv_yingye"
+                    android:layout_width="12dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/default_bg_low"
+                    android:layout_centerVertical="true"
+                    />
+
+                    <CheckBox
+                        android:visibility="gone"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_yingye"
+                        android:id="@+id/cb"
+                        android:paddingRight="20dp"
+                        android:layout_marginLeft="@dimen/distance"
+                        android:layout_width="12dp"
+                        android:layout_height="20dp"
+                        android:button="@null"
+                        android:background="@drawable/btn_select_up_down"
+                        />
+
+
+
+            </RelativeLayout>
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/view_line3"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:background="@color/main_red"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/ls_factort"
+        android:dividerHeight="@dimen/divider_1"
+        android:divider="@color/line_gray_cc"
+        android:layout_marginTop="@dimen/item_distance_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/pg_null"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

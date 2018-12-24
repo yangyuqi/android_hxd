@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/bg_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/view_title"/>
+
+    <RelativeLayout
+        android:padding="@dimen/item_distance_5"
+        android:background="@drawable/advice_rl_bg"
+        android:layout_marginLeft="@dimen/distance"
+        android:layout_marginRight="@dimen/distance"
+        android:layout_marginTop="@dimen/distance"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <EditText
+            android:cursorVisible="false"
+            android:id="@+id/edt_advice"
+            android:maxLength="300"
+            android:textColorHint="@color/text_gray"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="您对我们的网站,商品 ,服务 , 还有什么问题 ? 请及时告诉我们 !"
+            />
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/distance"
+            android:text="0/300"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/font_17"
+            />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:clickable="true"
+        android:id="@+id/iv_select_picture"
+        android:layout_margin="@dimen/distance"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/btn_add"
+        />
+
+</LinearLayout>

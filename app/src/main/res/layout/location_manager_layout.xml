@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/view_title"/>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/distance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/rl_has_data"
+            android:layout_above="@+id/rl_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <com.liaoinstan.springview.widget.SpringView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:type="follow"
+                android:id="@+id/sv"
+                app:header="@layout/default_header"
+                >
+
+            <ListView
+                android:listSelector="#0000"
+                android:divider="@color/bg_gray"
+                android:scrollbars="none"
+                android:overScrollMode="never"
+                android:id="@+id/location_manager_ls"
+                android:dividerHeight="@dimen/distance"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+
+            </com.liaoinstan.springview.widget.SpringView>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_above="@+id/rl_rl"
+            android:visibility="gone"
+            android:id="@+id/rl_no_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/pg_null"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_rl"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/main_red"
+            >
+
+        <TextView
+            android:drawablePadding="@dimen/distance"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@mipmap/icon_add"
+            android:id="@+id/location_manager_tv_add"
+            android:textSize="@dimen/font_15"
+            android:gravity="center"
+            android:textColor="@color/text_white"
+            android:text="新增地址"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+</RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

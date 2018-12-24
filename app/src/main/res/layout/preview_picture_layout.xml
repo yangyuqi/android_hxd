@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    >
+
+    <com.jude.rollviewpager.RollPagerView
+        android:layout_centerInParent="true"
+        android:id="@+id/roll_pv"
+        android:layout_width="match_parent"
+        android:layout_height="350dp">
+
+    </com.jude.rollviewpager.RollPagerView>
+
+
+    <TextView
+        android:id="@+id/tv_show_num"
+        android:textColor="@color/text_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/roll_pv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+
+
+    <ImageView
+        android:id="@+id/iv_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/distance"
+        android:src="@mipmap/btn_delete3"
+        />
+</RelativeLayout>

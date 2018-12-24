@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tv_content_title"
+            android:layout_marginTop="@dimen/distance"
+            android:background="@color/bg_white"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text=""
+            android:textSize="@dimen/font_15"
+            android:textColor="@color/text_black"
+            />
+
+        <com.zhejiang.haoxiadan.ui.view.NoScrollGridView
+            android:horizontalSpacing="5dp"
+            android:verticalSpacing="5dp"
+            android:numColumns="2"
+            android:scrollbars="none"
+            android:background="@color/bg_gray"
+            android:id="@+id/choice_page_view_tro_gv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.zhejiang.haoxiadan.ui.view.NoScrollGridView>
+
+    </LinearLayout>
+
+</LinearLayout>

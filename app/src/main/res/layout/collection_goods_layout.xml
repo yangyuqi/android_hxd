@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/rl_has_data"
+        android:layout_marginRight="@dimen/distance"
+        android:layout_marginLeft="@dimen/distance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+    <TextView
+        android:paddingTop="@dimen/distance"
+        android:paddingBottom="@dimen/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="最近一个月的收藏"
+        />
+
+        <com.liaoinstan.springview.widget.SpringView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:type="follow"
+            app:header="@layout/default_header"
+            app:footer="@layout/default_footer"
+            >
+
+     <GridView
+         android:horizontalSpacing="@dimen/item_distance_5"
+         android:verticalSpacing="5dp"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:numColumns="2"
+         android:id="@+id/collections_goods_gv"
+         ></GridView>
+
+
+    </com.liaoinstan.springview.widget.SpringView>
+
+</LinearLayout>
+
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_no_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/pg_null"
+                />
+
+        </RelativeLayout>
+
+
+</LinearLayout>

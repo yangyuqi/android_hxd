@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textColor="@color/text_gray"
+        android:id="@+id/hot_fragment_ls_item_tv"
+        android:textSize="@dimen/font_15"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/bg_gray"
+        android:text="2017/9/2"
+        />
+
+    <com.zhejiang.haoxiadan.ui.view.NoScrollListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:id="@+id/no_ls"
+        ></com.zhejiang.haoxiadan.ui.view.NoScrollListView>
+
+</LinearLayout>

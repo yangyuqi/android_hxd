@@ -1,0 +1,162 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/tools"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:contentScrim="@color/gradient_red_light"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            >
+        <include
+            layout="@layout/view_title" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <RelativeLayout
+        android:background="@color/gradient_red_light"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <RelativeLayout
+            android:background="@drawable/search_bg_rl"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="29dp">
+
+            <TextView
+                android:singleLine="true"
+                android:paddingRight="200dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/tv_search"
+                android:cursorVisible="false"
+                android:textColorHint="@color/text_gray"
+                android:textSize="@dimen/font_13"
+                android:background="@null"
+                android:hint="商品/供应商"
+                android:drawablePadding="@dimen/distance"
+                android:drawableLeft="@mipmap/icon_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <com.liaoinstan.springview.widget.SpringView
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:type="follow"
+        android:id="@+id/sv"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <android.support.v4.widget.NestedScrollView
+            android:scrollbars="none"
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <com.zhejiang.haoxiadan.ui.view.MyChoseGridView
+                    android:id="@+id/top_gv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:numColumns="5"
+                    android:padding="@dimen/distance"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"></com.zhejiang.haoxiadan.ui.view.MyChoseGridView>
+
+                <LinearLayout
+                    android:paddingBottom="@dimen/distance"
+                    android:paddingRight="@dimen/distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/distance">
+
+                    <com.jude.rollviewpager.RollPagerView
+                        android:id="@+id/roll_pv"
+                        android:layout_width="match_parent"
+                        android:layout_height="162dp"
+                        android:background="@color/bg_gray">
+
+                    </com.jude.rollviewpager.RollPagerView>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="62dp"
+                        android:layout_marginTop="@dimen/distance"
+                        android:background="@drawable/shape_bg_eva">
+
+                        <ImageView
+                            android:id="@+id/iv_icon_test"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/toutiaoxxhdpi" />
+
+                        <com.zhejiang.haoxiadan.ui.view.UPMarqueeView
+                            android:id="@+id/up_mv"
+                            android:layout_marginRight="@dimen/item_distance_5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/distance"
+                            android:layout_toRightOf="@+id/iv_icon_test">
+
+                        </com.zhejiang.haoxiadan.ui.view.UPMarqueeView>
+
+
+                    </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:paddingBottom="@dimen/distance"
+                        android:paddingRight="@dimen/distance"
+                        android:paddingLeft="@dimen/distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <com.zhejiang.haoxiadan.ui.view.MyChoseListView
+                            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                            android:divider="@null"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/no_ls"
+                            ></com.zhejiang.haoxiadan.ui.view.MyChoseListView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+</com.liaoinstan.springview.widget.SpringView>
+</android.support.design.widget.CoordinatorLayout>
+

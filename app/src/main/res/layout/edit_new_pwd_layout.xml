@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/bg_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/view_title"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_white"
+        android:layout_marginTop="@dimen/distance"
+        >
+
+        <RelativeLayout
+            android:layout_marginTop="60dp"
+            android:background="@drawable/login_rl_bg"
+            android:layout_marginRight="48dp"
+            android:layout_marginLeft="48dp"
+            android:layout_width="match_parent"
+            android:layout_height="38dp">
+
+            <EditText
+                android:gravity="center"
+                android:cursorVisible="true"
+                android:id="@+id/edt_input_current_pwd"
+                android:inputType="textPassword"
+                android:textSize="@dimen/font_15"
+                android:textColorHint="@color/text_gray"
+                android:paddingLeft="@dimen/distance"
+                android:hint="请输入当前密码"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_rl_bg"
+            android:layout_marginRight="48dp"
+            android:layout_marginLeft="48dp"
+            android:layout_width="match_parent"
+            android:layout_height="38dp">
+
+            <EditText
+                android:gravity="center"
+                android:cursorVisible="true"
+                android:id="@+id/edt_input_new_pwd"
+                android:inputType="textPassword"
+                android:textSize="@dimen/font_15"
+                android:textColorHint="@color/text_gray"
+                android:paddingLeft="@dimen/distance"
+                android:hint="请输入新密码"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:clickable="true"
+            android:id="@+id/tv_commit"
+            android:textSize="@dimen/font_15"
+            android:textColor="@color/text_white"
+            android:gravity="center"
+            android:text="提交"
+            android:background="@drawable/ripper_register_bg"
+            android:layout_marginRight="48dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="38dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

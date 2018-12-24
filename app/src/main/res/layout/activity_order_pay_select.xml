@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_gray" >
+    <com.zhejiang.haoxiadan.ui.view.CommonTitle
+        android:id="@+id/common_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleStr="@string/title_cashier" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pay_select_top_height"
+        android:layout_marginTop="@dimen/top_distance"
+        android:background="@color/bg_white"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_gray_17"
+            android:text="@string/label_order_total_price"/>
+        <TextView
+            android:id="@+id/tv_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pay_select_price_margin_top"
+            style="@style/text_red_17"
+            android:text=""/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/top_distance"
+        android:background="@color/bg_white"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/text_gray_14"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pay_select_head_height"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/distance"
+            android:text="@string/label_select_pay_way" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_1"
+            android:background="@color/line_gray_cc" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pay_select_pay_way_height"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_icon_aliapy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/distance"
+                android:src="@mipmap/icon_alipay" />
+
+            <TextView
+                style="@style/text_black_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/distance"
+                android:layout_toRightOf="@id/iv_icon_aliapy"
+                android:text="@string/label_alipay" />
+
+            <CheckBox
+                android:id="@+id/iv_choose_alipay"
+                android:layout_width="@dimen/pay_select_choose_height"
+                android:layout_height="@dimen/pay_select_choose_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/distance"
+                android:background="@drawable/btn_choose2"
+                android:button="@null" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_1"
+            android:background="@color/line_gray_cc"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pay_select_pay_way_height"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_icon_wxpay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/distance"
+                android:src="@mipmap/icon_wechat" />
+
+            <TextView
+                style="@style/text_black_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/distance"
+                android:layout_toRightOf="@id/iv_icon_wxpay"
+                android:text="@string/label_wxpay" />
+
+            <CheckBox
+                android:id="@+id/iv_choose_wxpay"
+                android:layout_width="@dimen/pay_select_choose_height"
+                android:layout_height="@dimen/pay_select_choose_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/distance"
+                android:background="@drawable/btn_choose2"
+                android:button="@null" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_1"
+            android:background="@color/line_gray_cc"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rl_card_pay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pay_select_pay_way_height">
+
+            <ImageView
+                android:id="@+id/iv_icon_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/distance"
+                android:src="@mipmap/icon_zhongjin" />
+
+            <TextView
+                android:id="@+id/tv_bank_pay_label"
+                style="@style/text_black_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/distance"
+                android:layout_toRightOf="@id/iv_icon_bank"
+                android:text="@string/label_card_pay" />
+
+            <CheckBox
+                android:id="@+id/iv_choose_bank"
+                android:layout_width="@dimen/pay_select_choose_height"
+                android:layout_height="@dimen/pay_select_choose_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/distance"
+                android:background="@drawable/btn_choose2"
+                android:button="@null" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_current_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/distance"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="@dimen/distance">
+
+            <TextView
+                android:id="@+id/tv_current_card"
+                style="@style/text_black_17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/distance"
+                android:background="@drawable/btn_right" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_1"
+            android:background="@color/line_gray_cc" />
+
+        <RelativeLayout
+            android:id="@+id/rl_current_finance"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pay_select_pay_way_height">
+
+            <ImageView
+                android:id="@+id/iv_icon_daikuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/distance"
+                android:src="@mipmap/icon_daikuan" />
+
+            <TextView
+                android:id="@+id/tv_current_finance"
+                style="@style/text_black_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/distance"
+                android:layout_toRightOf="@id/iv_icon_daikuan"
+                android:text="@string/finance_banking" />
+
+            <CheckBox
+                android:id="@+id/iv_choose_finance"
+                android:layout_width="@dimen/pay_select_choose_height"
+                android:layout_height="@dimen/pay_select_choose_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/distance"
+                android:background="@drawable/btn_choose2"
+                android:button="@null" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_1"
+            android:background="@color/line_gray_cc" />
+
+        <RelativeLayout
+            android:id="@+id/rl_current_unionpay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pay_select_pay_way_height">
+
+            <ImageView
+                android:id="@+id/iv_icon_unionpay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/distance"
+                android:src="@mipmap/unionpay" />
+
+            <TextView
+                android:id="@+id/tv_current_unionpay"
+                style="@style/text_black_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/iv_icon_unionpay"
+                android:text="云闪付" />
+
+            <CheckBox
+                android:id="@+id/iv_choose_unionpay"
+                android:layout_width="@dimen/pay_select_choose_height"
+                android:layout_height="@dimen/pay_select_choose_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/distance"
+                android:background="@drawable/btn_choose2"
+                android:button="@null" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_1"
+            android:background="@color/line_gray_cc" />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_current_huawei"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pay_select_pay_way_height">
+
+            <ImageView
+                android:id="@+id/iv_icon_huawei"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/distance"
+                android:src="@mipmap/huawei1080" />
+
+            <TextView
+                android:id="@+id/tv_current_huawei"
+                style="@style/text_black_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/iv_icon_huawei"
+                android:text="华为Pay" />
+
+            <CheckBox
+                android:id="@+id/iv_choose_huawei"
+                android:layout_width="@dimen/pay_select_choose_height"
+                android:layout_height="@dimen/pay_select_choose_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/distance"
+                android:background="@drawable/btn_choose2"
+                android:button="@null" />
+
+            <View
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_1"
+                android:background="@color/line_gray_cc" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_current_sanxing"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pay_select_pay_way_height">
+
+            <ImageView
+                android:id="@+id/iv_icon_sanxing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/distance"
+                android:src="@mipmap/sanxing1080" />
+
+            <TextView
+                android:id="@+id/tv_current_sanxing"
+                style="@style/text_black_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/iv_icon_sanxing"
+                android:text="三星Pay" />
+
+            <CheckBox
+                android:id="@+id/iv_choose_sanxing"
+                android:layout_width="@dimen/pay_select_choose_height"
+                android:layout_height="@dimen/pay_select_choose_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/distance"
+                android:background="@drawable/btn_choose2"
+                android:button="@null" />
+
+            <View
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_1"
+                android:background="@color/line_gray_cc" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_current_financer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pay_select_pay_way_height">
+
+            <ImageView
+                android:id="@+id/iv_icon_daikuanr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/distance"
+                android:src="@mipmap/xiaomi1080" />
+
+            <TextView
+                android:id="@+id/tv_current_financer"
+                style="@style/text_black_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/iv_icon_daikuanr"
+                android:text="小米Pay" />
+
+            <CheckBox
+                android:id="@+id/iv_choose_financer"
+                android:layout_width="@dimen/pay_select_choose_height"
+                android:layout_height="@dimen/pay_select_choose_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/distance"
+                android:background="@drawable/btn_choose2"
+                android:button="@null" />
+            <View
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_1"
+                android:background="@color/line_gray_cc" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_submit"
+            style="@style/text_white_17"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginLeft="@dimen/pay_select_submit_margin_left"
+            android:layout_marginRight="@dimen/pay_select_submit_margin_left"
+            android:layout_marginTop="@dimen/pay_select_submit_margin_top"
+            android:background="@drawable/bg_solid_red_corner"
+            android:gravity="center"
+            android:text="@string/label_sure_pay" />
+
+    </LinearLayout>
+
+</LinearLayout>

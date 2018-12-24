@@ -1,0 +1,111 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "24.0.1"
+    defaultConfig {
+        applicationId "com.zhejiang.haoxiadan"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 23
+        versionName "2.1.8"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+    }
+    // 移除lint检查的error
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    dexOptions {
+        jumboMode true
+    }
+    buildTypes {
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+//            //Zipalign优化
+//            zipAlignEnabled true
+//            // 移除无用的resource文件
+//            shrinkResources true
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs/jniLibs']
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+
+}
+
+
+apply plugin: 'com.neenbedankt.android-apt' //添加这行
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile files('libs/okio-1.6.0.jar')
+    compile files('libs/libammsdk.jar')
+    compile files('libs/alipaySdk-20161222.jar')
+    compile files('libs/jcore-android_v1.1.2.jar')
+    compile files('libs/jpush-android_v3.0.5.jar')
+    compile files('libs/nineoldandroids-library-2.4.0.jar')
+    compile files('libs/universal-image-loader-1.9.5.jar')
+    compile files('libs/picasso-2.5.2.jar')
+    compile files('libs/jmessage-android_v2.2.0.jar')
+    compile files('libs/pinyin4j-2.5.0.jar')
+    testCompile 'junit:junit:4.12'
+    //添加这行
+    apt 'com.jakewharton:butterknife-compiler:8.2.1'
+    //添加这行
+    //高斯模糊
+    //标签
+    compile project(':reclib-qq')
+    compile project(':reclib-testemoticons')
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    //    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar'
+    compile 'me.iwf.photopicker:PhotoPicker:0.9.0@aar'
+    compile 'io.reactivex:rxjava:1.0.14'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.contrarywind:Android-PickerView:3.2.5'
+    compile 'com.jakewharton:butterknife:8.2.1'
+    compile 'org.jsoup:jsoup:1.10.3'
+    compile 'com.liaoinstan.springview:library:1.2.6'
+    compile 'com.jude:rollviewpager:1.4.6'
+    compile 'net.qiujuer.genius:blur:2.0.0-beta4'
+    compile 'com.github.donkingliang:LabelsView:1.2.0'
+    compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+    compile 'com.github.w446108264:AndroidEmoji:1.0.0'
+    compile 'com.github.chrisbanes.photoview:library:1.2.4'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.amap.api:location:latest.integration'
+    compile(name: 'MobilePayment-v1.0.0', ext: 'aar')
+    compile files('libs/fastjson-1.1.31.jar')
+}

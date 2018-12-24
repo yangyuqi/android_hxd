@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:background="@color/bg_white"
+        android:layout_marginRight="@dimen/distance"
+        android:layout_marginLeft="@dimen/distance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <TextView
+        android:textSize="@dimen/font_15"
+        android:background="@color/bg_gray"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_black_light"
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:text="2017-7-8"
+        />
+
+
+    <com.zhejiang.haoxiadan.ui.view.NoScrollGridView
+        android:verticalSpacing="@dimen/item_distance_5"
+        android:horizontalSpacing="@dimen/item_distance_5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:id="@+id/no_gv"
+        ></com.zhejiang.haoxiadan.ui.view.NoScrollGridView>
+</LinearLayout>
+</LinearLayout>

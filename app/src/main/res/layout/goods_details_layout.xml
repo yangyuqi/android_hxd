@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_top"
+        android:background="@color/bg_white"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:visibility="visible"
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_back"
+            android:padding="@dimen/distance"
+            android:clickable="true"
+            android:layout_centerVertical="true"
+            />
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/goods_details_tl"
+            app:tabGravity="center"
+            app:tabMode="fixed"
+            app:tabIndicatorColor="@color/main_red"
+            app:tabSelectedTextColor="@color/main_red"
+            app:tabTextColor="@color/text_gray"
+            android:layout_toLeftOf="@+id/ib_carts"
+            android:layout_toRightOf="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="商品"
+                />
+            <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="详情"
+                />
+
+
+        </android.support.design.widget.TabLayout>
+
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:visibility="visible"
+            android:id="@+id/ib_carts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_more2"
+            android:padding="@dimen/distance"
+            android:clickable="true"
+            android:layout_centerVertical="true"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_1"
+            android:background="@color/line_gray_cc"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:layout_above="@+id/ll_bottom"
+        android:layout_below="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/view_page"
+        ></android.support.v4.view.ViewPager>
+
+
+    <LinearLayout
+        android:background="@color/bg_white"
+        android:orientation="vertical"
+        android:id="@+id/ll_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="52dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_1"
+            android:background="@color/line_gray_cc"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:textSize="@dimen/font_13"
+                android:id="@+id/tv_go_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:drawableTop="@drawable/btn_shop"
+                android:paddingLeft="15dp"
+                android:paddingRight="14dp"
+                android:text="店铺"
+                android:textColor="@color/text_black_light" />
+
+            <View
+                android:layout_width="@dimen/divider_1"
+                android:layout_height="match_parent"
+                android:background="@color/line_gray_cc"/>
+
+            <CheckBox
+            android:drawableTop="@drawable/checkbox_save_button_bg"
+            android:textColor="@color/text_black_light"
+            android:button="@null"
+            android:layout_gravity="center_vertical"
+            android:paddingRight="10dp"
+            android:paddingLeft="@dimen/distance"
+            android:id="@+id/goods_details_layout_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收藏"
+            android:textSize="@dimen/font_13"
+            />
+
+            <View
+                android:layout_width="@dimen/divider_1"
+                android:layout_height="match_parent"
+                android:background="@color/line_gray_cc"/>
+
+            <TextView
+                android:textSize="@dimen/font_13"
+                android:id="@+id/tv_go_consulte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:drawableTop="@drawable/btn_cpnsulte"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:text="咨询"
+                android:textColor="@color/text_black_light" />
+
+            <TextView
+                android:id="@+id/tv_go_ping"
+                android:gravity="center"
+                android:text="立即拼单"
+                android:textColor="@color/text_white"
+                android:textSize="16sp"
+                android:layout_marginLeft="@dimen/distance"
+                android:background="@drawable/scale_color_bg"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <View
+                android:layout_width="@dimen/divider_2"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/tv_go_cart"
+                android:textColor="@color/text_white"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:text="加入购物车"
+                android:background="@drawable/scale_color_bg_second"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+    </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="225dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_solid_white_corner">
+
+
+    <!-- 标题栏 -->
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/text_black_17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:minHeight="40dp"
+        android:paddingTop="15dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/text_black_14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:minHeight="40dp"
+        android:padding="5dp"
+        android:visibility="gone"/>
+
+
+    <!-- 分割线1 -->
+    <View
+        android:id="@+id/v_divider_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_content"
+        android:background="@color/line_gray_84" />
+
+
+    <!-- 定位点 -->
+    <View
+        android:id="@+id/v_place_holder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:background="@color/line_gray_84" />
+
+
+    <!-- 左侧negative按钮 -->
+    <TextView
+        android:id="@+id/btn_negative"
+        style="@style/text_black_17"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignRight="@id/v_place_holder"
+        android:layout_below="@id/v_divider_1"
+        android:gravity="center"
+        android:text="@string/btn_cancel" />
+
+    <!-- 分割线2 -->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/v_divider_1"
+        android:layout_centerHorizontal="true"
+        android:background="@color/line_gray_84" />
+
+    <!-- 右侧positive按钮 -->
+    <TextView
+        android:id="@+id/btn_positive"
+        style="@style/text_black_17"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@id/v_place_holder"
+        android:layout_below="@id/v_divider_1"
+        android:layout_marginLeft="0.5dp"
+        android:gravity="center"
+        android:text="@string/btn_sure" />
+
+</RelativeLayout>

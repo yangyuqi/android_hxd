@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/view_title"/>
+
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/bg_white"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="161dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/logo"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@drawable/login_rl_bg"
+        android:layout_marginRight="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="38dp">
+
+        <EditText
+            android:maxLength="11"
+            android:cursorVisible="true"
+            android:id="@+id/edt_input_phone"
+            android:inputType="phone"
+            android:textSize="@dimen/font_15"
+            android:textColorHint="@color/text_gray"
+            android:paddingLeft="@dimen/distance"
+            android:hint="@string/login_text_hint"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:clickable="true"
+        android:id="@+id/tv_login"
+        android:textSize="@dimen/font_15"
+        android:textColor="@color/text_white"
+        android:gravity="center"
+        android:text="@string/login_show_next"
+        android:background="@drawable/ripper_register_bg"
+        android:layout_marginRight="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="38dp" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_show_xieyi"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        >
+
+        <TextView
+            android:textColor="@color/text_black_light"
+            android:textSize="@dimen/font_13"
+            android:text="用户注册代表同意"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textSize="@dimen/font_13"
+            android:id="@+id/tv_xie_yi"
+            android:paddingLeft="5dp"
+            android:textColor="@color/text_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《用户注册协议》"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/bg_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/view_title"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/distance"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_width_45"
+                android:layout_marginTop="@dimen/item_distance_5"
+                android:background="@color/bg_white"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/distance"
+                    android:text="购物指南"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/font_14" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_1"
+                android:background="@color/line_gray_cc" />
+
+            <RelativeLayout
+                android:id="@+id/rl_discuss_pay"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/ripple_bg"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/distance"
+                    android:text="付款方式"
+                    android:textColor="@color/text_black_light"
+                    android:textSize="@dimen/font_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/distance"
+                    android:src="@mipmap/icon_more" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_1"
+                android:background="@color/line_gray_cc" />
+
+            <RelativeLayout
+                android:id="@+id/rl_discuss_size"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/ripple_bg"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/distance"
+                    android:text="尺码选择"
+                    android:textColor="@color/text_black_light"
+                    android:textSize="@dimen/font_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/distance"
+                    android:src="@mipmap/icon_more" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_1"
+                android:background="@color/line_gray_cc" />
+
+            <RelativeLayout
+                android:id="@+id/rl_discuss_ticket"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/ripple_bg"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/distance"
+                    android:text="发票问题"
+                    android:textColor="@color/text_black_light"
+                    android:textSize="@dimen/font_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/distance"
+                    android:src="@mipmap/icon_more" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_1"
+                android:background="@color/line_gray_cc" />
+
+            <RelativeLayout
+                android:id="@+id/rl_discuss_issue"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/ripple_bg"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/distance"
+                    android:text="商品咨询"
+                    android:textColor="@color/text_black_light"
+                    android:textSize="@dimen/font_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/distance"
+                    android:src="@mipmap/icon_more" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_width_45"
+                android:layout_marginTop="@dimen/distance"
+                android:background="@color/bg_white"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/distance"
+                    android:text="售后服务"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/font_14" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_1"
+                android:background="@color/line_gray_cc" />
+
+            <RelativeLayout
+                android:id="@+id/rl_discuss_advice"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/ripple_bg"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/distance"
+                    android:text="投诉与建议"
+                    android:textColor="@color/text_black_light"
+                    android:textSize="@dimen/font_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/distance"
+                    android:src="@mipmap/icon_more" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_1"
+                android:background="@color/line_gray_cc" />
+
+            <RelativeLayout
+                android:id="@+id/rl_discuss_refund_style"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/ripple_bg"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/distance"
+                    android:text="退款方式与时效"
+                    android:textColor="@color/text_black_light"
+                    android:textSize="@dimen/font_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/distance"
+                    android:src="@mipmap/icon_more" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_1"
+                android:background="@color/line_gray_cc" />
+
+            <RelativeLayout
+                android:id="@+id/rl_discuss_path"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/ripple_bg"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/distance"
+                    android:text="退换货流程"
+                    android:textColor="@color/text_black_light"
+                    android:textSize="@dimen/font_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/distance"
+                    android:src="@mipmap/icon_more" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_1"
+                android:background="@color/line_gray_cc" />
+
+            <RelativeLayout
+                android:id="@+id/rl_discuss_policy"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/ripple_bg"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/distance"
+                    android:text="退换货政策"
+                    android:textColor="@color/text_black_light"
+                    android:textSize="@dimen/font_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/distance"
+                    android:src="@mipmap/icon_more" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_width_45"
+                android:layout_marginTop="@dimen/distance"
+                android:background="@color/bg_white"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/distance"
+                    android:text="配送方式"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/font_14" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_1"
+                android:background="@color/line_gray_cc" />
+
+            <RelativeLayout
+                android:id="@+id/rl_discuss_goods"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/ripple_bg"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/distance"
+                    android:text="验货和签收"
+                    android:textColor="@color/text_black_light"
+                    android:textSize="@dimen/font_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/distance"
+                    android:src="@mipmap/icon_more" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_1"
+                android:background="@color/line_gray_cc" />
+
+            <RelativeLayout
+                android:id="@+id/rl_discuss_express"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/ripple_bg"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/distance"
+                    android:text="顺丰速递"
+                    android:textColor="@color/text_black_light"
+                    android:textSize="@dimen/font_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/distance"
+                    android:src="@mipmap/icon_more" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_1"
+                android:background="@color/line_gray_cc" />
+
+            <RelativeLayout
+                android:id="@+id/rl_discuss_range"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/ripple_bg"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/distance"
+                    android:text="配送范围"
+                    android:textColor="@color/text_black_light"
+                    android:textSize="@dimen/font_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/distance"
+                    android:src="@mipmap/icon_more" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_1"
+                android:background="@color/line_gray_cc" />
+
+            <RelativeLayout
+                android:id="@+id/rl_discuss_time"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/ripple_bg"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/distance"
+                    android:text="配送时间"
+                    android:textColor="@color/text_black_light"
+                    android:textSize="@dimen/font_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/distance"
+                    android:src="@mipmap/icon_more" />
+
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

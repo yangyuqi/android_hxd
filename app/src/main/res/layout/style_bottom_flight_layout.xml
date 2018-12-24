@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhejiang.haoxiadan.ui.view.NoScrollListView
+        android:id="@+id/flight_ls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_rl_test"
+        android:divider="@color/line_gray_cc"
+        android:dividerHeight="@dimen/divider_1"></com.zhejiang.haoxiadan.ui.view.NoScrollListView>
+
+</LinearLayout>

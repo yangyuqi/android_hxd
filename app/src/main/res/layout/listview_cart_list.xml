@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg_white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height_cart_item"
+        android:background="@color/bg_white"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <CheckBox
+            android:id="@+id/iv_choose_head"
+            android:layout_width="@dimen/cart_item_checkbox_width"
+            android:layout_height="@dimen/cart_item_checkbox_width"
+            android:layout_marginLeft="@dimen/distance"
+            android:button="@null"
+            android:background="@drawable/btn_shoppingcart"/>
+        <TextView
+            android:id="@+id/tv_supplier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/distance"
+            style="@style/text_black_14"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_1"
+        android:background="@color/line_gray_cc"/>
+    <LinearLayout
+        android:id="@+id/ll_goods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/bg_white">
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@mipmap/home_pg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="请选择行业"
+            android:textColor="@color/text_white"
+            android:textSize="18sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <ListView
+                    android:paddingTop="60dp"
+                    android:divider="@null"
+                    android:dividerHeight="20dp"
+                    android:id="@+id/home_dialog_ls"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content">
+
+                </ListView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

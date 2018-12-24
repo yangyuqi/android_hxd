@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:textColor="@color/text_black"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/tv_title"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_1"
+            android:background="@color/line_gray_cc"/>
+
+    <WebView
+        android:paddingRight="@dimen/distance"
+        android:paddingLeft="@dimen/distance"
+        android:id="@+id/ls_details"
+        android:layout_below="@+id/view_ff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></WebView>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_1"
+            android:background="@color/line_gray_cc"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            >
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_disagree"
+                android:textSize="16sp"
+                android:textColor="@color/text_black"
+                android:background="@drawable/disagree_finance_bg"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:text="不同意并关闭"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                />
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_agree"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:background="@drawable/agree_finance_bg"
+                android:gravity="center"
+                android:text="同意并继续"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

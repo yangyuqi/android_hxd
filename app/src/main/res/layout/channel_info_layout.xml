@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/view_title"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/distance"
+        android:orientation="vertical"
+        >
+
+        <com.jude.rollviewpager.RollPagerView
+            android:id="@+id/roll_pv"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@color/bg_gray">
+
+        </com.jude.rollviewpager.RollPagerView>
+
+
+    <com.zhejiang.haoxiadan.ui.view.NoScrollListView
+        android:layout_marginTop="@dimen/distance"
+        android:divider="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/no_ls"
+        ></com.zhejiang.haoxiadan.ui.view.NoScrollListView>
+</LinearLayout>
+</ScrollView>
+</LinearLayout>

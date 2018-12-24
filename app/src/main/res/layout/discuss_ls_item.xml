@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hedgehog="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:paddingRight="@dimen/distance"
+        android:paddingLeft="@dimen/distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/bg_white"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.zhejiang.haoxiadan.ui.view.CircleImageView
+                android:id="@+id/user_civ"
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="45dp"
+                android:layout_height="45dp" />
+
+            <TextView
+                android:singleLine="true"
+                android:layout_marginRight="@dimen/item_distance_5"
+                android:layout_toLeftOf="@+id/ratingbar_one"
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/user_civ"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/distance"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/font_15"
+                android:text=""
+                />
+
+            <RatingBar
+                android:layout_centerVertical="true"
+                style="@style/RadingStyle"
+                android:id="@+id/ratingbar_one"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_15"
+            android:textColor="@color/text_black"
+            android:text=""
+            />
+
+        <com.zhejiang.haoxiadan.ui.view.NoScrollGridView
+            android:verticalSpacing="@dimen/item_distance_5"
+            android:layout_marginTop="@dimen/item_distance_5"
+            android:numColumns="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/no_gv"
+            ></com.zhejiang.haoxiadan.ui.view.NoScrollGridView>
+
+        <TextView
+            android:layout_marginTop="@dimen/item_distance_5"
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017-8-6"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/font_14"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>

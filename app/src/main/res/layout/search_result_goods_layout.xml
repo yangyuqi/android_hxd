@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/bg_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:background="@color/bg_white"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/distance"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerInside"
+            android:paddingRight="20dp"
+            android:clickable="true"
+            android:id="@+id/iv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_back"/>
+
+        <ImageView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_right"
+            android:src="@drawable/btn_more2"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_change_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_toRightOf="@+id/iv_left"
+            android:background="@drawable/search_bg_rl_deep"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+            <EditText
+                android:textColor="@color/text_gray"
+                android:paddingRight="@dimen/btn_width_45"
+                android:layout_marginLeft="@dimen/distance"
+                android:singleLine="true"
+                android:imeOptions="actionSearch"
+                android:id="@+id/tv_search"
+                android:textColorHint="@color/text_gray"
+                android:textSize="@dimen/font_13"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:cursorVisible="true"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/iv_left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rl_show_bg"
+            android:background="@color/white"
+            android:layout_marginRight="30dp"
+            >
+
+            <TextView
+                android:maxWidth="180dp"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:id="@+id/tv_name"
+                android:textColor="@color/text_black_light"
+                android:textSize="16sp"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="找相似"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/bg_white"
+        app:tabTextColor="#000"
+        app:tabSelectedTextColor="@color/main_red"
+        app:tabIndicatorColor="@color/main_red"
+        app:tabTextAppearance="@style/text_white_14"
+        app:tabMode="scrollable"
+        >
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全部"
+            />
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="去火拼"
+            />
+
+
+    </android.support.design.widget.TabLayout>
+
+    <LinearLayout
+        android:background="@color/bg_white"
+        android:layout_width="match_parent"
+        android:layout_height="37dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <RelativeLayout
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/tv_zonghe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="综合"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/font_15"
+                    />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <RelativeLayout
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/tv_zuixin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="最新"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/font_15"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <RelativeLayout
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="价格"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/font_15"
+                    />
+
+
+                <ImageView
+                    android:id="@+id/default_iv"
+                    android:layout_marginLeft="@dimen/distance"
+                    android:layout_toRightOf="@+id/tv_price"
+                    android:layout_width="12dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/default_bg_low"
+                    android:layout_centerVertical="true"
+                    />
+
+                <CheckBox
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_price"
+                    android:id="@+id/cb"
+                    android:paddingRight="20dp"
+                    android:layout_marginLeft="@dimen/distance"
+                    android:layout_width="12dp"
+                    android:layout_height="20dp"
+                    android:button="@null"
+                    android:background="@drawable/btn_select_up_down"
+                    android:checked="true"
+                    />
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <RelativeLayout
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+
+                    android:id="@+id/tv_xuanze"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="筛选"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/font_15"
+                    />
+
+
+                <ImageView
+                    android:layout_toRightOf="@+id/tv_xuanze"
+                    android:layout_marginLeft="@dimen/distance"
+                    android:layout_width="12dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/icon_shaixuanxxhdpi"
+                    android:layout_centerVertical="true"
+                    />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="@dimen/item_distance_5"
+        android:id="@+id/ll_has_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <com.liaoinstan.springview.widget.SpringView
+        android:id="@+id/spring_view"
+        android:layout_marginTop="5dp"
+        app:header="@layout/default_header"
+        app:footer="@layout/default_footer"
+        app:type="follow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+            <GridView
+                android:horizontalSpacing="@dimen/item_distance_5"
+                android:verticalSpacing="5dp"
+                android:id="@+id/gv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="2"
+                ></GridView>
+
+
+    </com.liaoinstan.springview.widget.SpringView>
+</LinearLayout>
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/pg_null"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical" />
+
+</android.support.v4.widget.DrawerLayout>

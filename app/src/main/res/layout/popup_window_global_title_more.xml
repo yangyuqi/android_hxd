@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pop_ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/pg_order"
+        android:layout_alignParentRight="true"
+        android:gravity="center">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_msg"
+                android:layout_marginLeft="@dimen/distance"
+                android:layout_marginRight="@dimen/distance"
+                android:drawablePadding="20dp"
+                android:drawableLeft="@mipmap/icon_pop_message"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:gravity="center"
+                android:text="消息"
+                style="@style/text_black_light_17" />
+            <TextView
+                android:id="@+id/tv_home"
+                android:layout_marginLeft="@dimen/distance"
+                android:layout_marginRight="@dimen/distance"
+                android:drawablePadding="20dp"
+                android:drawableLeft="@mipmap/icon_pop_home"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:gravity="center"
+                android:text="首页"
+                style="@style/text_black_light_17" />
+
+            <TextView
+                android:id="@+id/tv_cart"
+                android:layout_marginLeft="@dimen/distance"
+                android:layout_marginRight="@dimen/distance"
+                android:drawablePadding="20dp"
+                android:drawableLeft="@mipmap/icon_pop_car"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:gravity="center"
+                android:text="购物车"
+                style="@style/text_black_light_17" />
+            <TextView
+                android:id="@+id/tv_person"
+                android:layout_marginLeft="@dimen/distance"
+                android:layout_marginRight="@dimen/distance"
+                android:drawablePadding="20dp"
+                android:drawableLeft="@mipmap/icon_pop_person"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:gravity="center"
+                android:text="个人中心"
+                style="@style/text_black_light_17" />
+            <TextView
+                android:id="@+id/tv_feedback"
+                android:layout_marginLeft="@dimen/distance"
+                android:layout_marginRight="@dimen/distance"
+                android:drawablePadding="20dp"
+                android:drawableLeft="@mipmap/btn_feedback_order"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:gravity="center"
+                android:text="我要反馈"
+                style="@style/text_black_light_17" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

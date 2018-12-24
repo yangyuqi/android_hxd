@@ -1,0 +1,12 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:scrollbars="none">
+    <com.zhejiang.haoxiadan.ui.view.NoScrollListView
+        android:id="@+id/lv_cate_m"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="@dimen/divider_2"
+        android:divider="@color/line_gray_cc"/>
+</ScrollView>

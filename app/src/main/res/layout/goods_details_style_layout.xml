@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:background="@color/bg_white"
+        android:layout_marginTop="@dimen/item_distance_5"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/goods_details_tl"
+            app:tabMode="fixed"
+            app:tabIndicatorColor="#0000"
+            app:tabSelectedTextColor="@color/main_red"
+            app:tabTextColor="@color/text_gray"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="图文介绍"
+                />
+            <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="规格参数"
+                />
+
+        </android.support.design.widget.TabLayout>
+
+        <View
+            android:layout_marginBottom="@dimen/distance"
+            android:layout_marginTop="@dimen/distance"
+            android:background="@color/line_gray_cc"
+            android:layout_centerInParent="true"
+            android:layout_width="@dimen/divider_1"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+    <WebView
+        android:layout_marginTop="@dimen/item_distance_5"
+        android:id="@+id/ls_details"
+        android:layout_below="@+id/view_ff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></WebView>
+
+</LinearLayout>

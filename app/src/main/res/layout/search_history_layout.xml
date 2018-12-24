@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:background="@color/bg_white"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/distance"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerInside"
+            android:paddingRight="30dp"
+            android:clickable="true"
+            android:id="@+id/iv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_back"/>
+
+        <RelativeLayout
+            android:layout_toRightOf="@+id/iv_left"
+            android:background="@drawable/search_bg_rl_no_deep"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+            <EditText
+                android:paddingLeft="@dimen/item_distance_5"
+                android:textColor="@color/text_gray"
+                android:paddingRight="90dp"
+                android:cursorVisible="true"
+                android:singleLine="true"
+                android:imeOptions="actionSearch"
+                android:id="@+id/tv_search"
+                android:textColorHint="@color/text_gray"
+                android:textSize="@dimen/font_13"
+                android:background="@null"
+                android:hint="商品/供应商"
+                android:drawablePadding="@dimen/distance"
+                android:drawableLeft="@mipmap/icon_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                />
+
+            <ImageView
+                android:paddingRight="15dp"
+                android:id="@+id/iv_search_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/btn_delete"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="30dp"
+                android:layout_centerVertical="true"
+                />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_2"
+        android:background="@color/bg_gray"/>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:background="@color/bg_white"
+        app:tabIndicatorColor="@color/main_red"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/main_red"
+        app:tabTextAppearance="@style/text_white_14"
+        app:tabTextColor="@color/text_gray">
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="商品" />
+
+        <!--<android.support.design.widget.TabItem-->
+            <!--android:visibility="gone"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="" />-->
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="供应商" />
+
+    </android.support.design.widget.TabLayout>
+
+    <LinearLayout
+        android:background="@color/bg_white"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:padding="@dimen/distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/text_black_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搜索历史"
+            />
+
+            <ImageView
+                android:id="@+id/iv_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/btn_delete"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="30dp"
+                />
+
+    </RelativeLayout>
+    <com.donkingliang.labels.LabelsView
+        android:layout_marginRight="@dimen/distance"
+        android:layout_marginLeft="@dimen/distance"
+        android:id="@+id/labelView"
+        android:layout_marginTop="@dimen/distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelBackground="@drawable/label_bg"
+        app:labelTextColor="@drawable/label_text_color"
+        app:labelTextSize="14sp"
+        app:labelTextPaddingBottom="5dp"
+        app:labelTextPaddingLeft="10dp"
+        app:labelTextPaddingRight="10dp"
+        app:labelTextPaddingTop="5dp"
+        app:lineMargin="10dp"
+        app:wordMargin="10dp"
+        app:selectType="SINGLE"
+        app:maxSelect="5"
+        >
+
+
+    </com.donkingliang.labels.LabelsView>
+</LinearLayout>
+</LinearLayout>

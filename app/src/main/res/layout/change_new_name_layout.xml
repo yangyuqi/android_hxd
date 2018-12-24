@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/bg_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/view_title"/>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/distance"
+        android:background="@color/bg_white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+
+        <EditText
+            android:layout_marginRight="@dimen/distance"
+            android:layout_toLeftOf="@+id/iv_delete"
+            android:cursorVisible="true"
+            android:id="@+id/edt_name"
+            android:textSize="@dimen/font_15"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/distance"
+            android:background="@null"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <ImageView
+
+            android:id="@+id/iv_delete"
+            android:padding="@dimen/distance"
+            android:src="@drawable/btn_delete_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_1"
+            android:background="@color/line_gray_84"/>
+
+
+        <TextView
+            android:clickable="true"
+            android:id="@+id/tv_login"
+            android:textSize="@dimen/font_15"
+            android:textColor="@color/text_white"
+            android:gravity="center"
+            android:text="保存"
+            android:background="@drawable/ripper_register_bg"
+            android:layout_marginRight="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="38dp"
+            android:layout_width="match_parent"
+            android:layout_height="38dp" />
+
+</LinearLayout>
+</LinearLayout>

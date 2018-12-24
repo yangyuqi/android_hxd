@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_gray">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/category_title_height">
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            style="@style/text_black_14"
+            android:gravity="center"
+            android:maxEms="10"
+            android:ellipsize="end"
+            android:text=""/>
+        <View
+            android:layout_width="@dimen/category_title_line_width"
+            android:layout_height="@dimen/divider_1"
+            android:background="@color/text_black"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_title"
+            android:layout_marginRight="@dimen/distance"/>
+        <View
+            android:layout_width="@dimen/category_title_line_width"
+            android:layout_height="@dimen/divider_1"
+            android:background="@color/text_black"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_title"
+            android:layout_marginLeft="@dimen/distance"/>
+
+    </RelativeLayout>
+    <com.zhejiang.haoxiadan.ui.view.NoScrollGridView
+        android:id="@+id/gv_cate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/distance"
+        android:layout_marginRight="@dimen/distance"
+        android:numColumns="4"
+        android:verticalSpacing="@dimen/item_distance_5"
+        android:horizontalSpacing="@dimen/item_distance_5"/>
+</LinearLayout>

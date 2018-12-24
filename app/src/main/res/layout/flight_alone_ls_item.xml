@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bg_white"
+        >
+        <LinearLayout
+            android:layout_marginLeft="@dimen/distance"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_style"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/font_17"
+                android:textColor="@color/text_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S"
+                />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/font_14"
+                android:textColor="@color/text_black_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥44.00"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_ll"
+            android:layout_marginRight="@dimen/distance"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_reduce"
+                android:layout_marginRight="@dimen/distance"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_reduce2"
+                />
+
+            <com.zhejiang.haoxiadan.ui.view.ExtendedEditText
+                android:imeActionLabel="@string/btn_sure"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:id="@+id/edt_num"
+                android:gravity="center"
+                android:textSize="@dimen/font_15"
+                android:textColor="@color/text_black_light"
+                android:text="0"
+                android:enabled="false"
+                android:inputType="number"
+                android:cursorVisible="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/good2_pg"
+                />
+            <ImageView
+                android:layout_marginLeft="@dimen/distance"
+                android:id="@+id/iv_add"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_add2"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/ll_ll"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:visibility="gone"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/font_13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="库存："
+                />
+
+            <TextView
+                android:id="@+id/tv_all_num"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/font_13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

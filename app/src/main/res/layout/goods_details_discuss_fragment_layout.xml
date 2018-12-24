@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="@color/bg_white"
+        android:paddingLeft="@dimen/distance"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/item_distance_5"
+        >
+        <TextView
+            android:textSize="@dimen/font_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="商品综合满意分"
+            />
+
+        <TextView
+            android:id="@+id/tv_get_score"
+            android:textColor="@color/main_red"
+            android:layout_marginLeft="@dimen/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5分"
+            android:textSize="@dimen/font_15"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:paddingTop="@dimen/item_distance_5"
+        android:background="@color/bg_white"
+        android:paddingLeft="@dimen/distance"
+        android:textColor="@color/text_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/item_distance_5"
+        android:text="全部评价"
+        android:paddingBottom="@dimen/item_distance_5"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_has_data"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+    <com.liaoinstan.springview.widget.SpringView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:type="follow"
+        android:id="@+id/sv"
+        app:header="@layout/default_header"
+        app:footer="@layout/default_footer"
+        >
+
+    <ListView
+        android:background="@color/bg_white"
+        android:paddingBottom="@dimen/distance"
+        android:id="@+id/goods_details_discuss_ls"
+        android:dividerHeight="@dimen/divider_1"
+        android:divider="@color/line_gray_cc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+</com.liaoinstan.springview.widget.SpringView>
+
+</LinearLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/pg_null"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

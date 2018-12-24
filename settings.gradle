@@ -1,0 +1,3 @@
+include ':app', ':reclib-qq', ':reclib-testemoticons'
+project(':reclib-qq').projectDir = new File('third/reclib-qq')
+project(':reclib-testemoticons').projectDir = new File('third/reclib-testemoticons')
